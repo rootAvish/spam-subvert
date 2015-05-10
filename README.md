@@ -78,7 +78,10 @@ Please feel free to contact me for any further queries :wink:.
 ###Okay, here is what Antriksh did:
 
 First, here is how the parser script works for now:
+	
+```bash
 	python parser.py <filename>
+```
 	
 What this script is doing is checking if in in common nouns a word is existing and replaces that word with the noun if there is one and if there is not, removes the word.
 
