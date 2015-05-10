@@ -74,3 +74,12 @@ Now, send the 'optimized e-mails.' Once that's done, and you have a new mailbox,
 Then we can figure out a way to compare both results, like say draw a graph. I'll take care of that but that's for a later time.
 
 Please feel free to contact me for any further queries :wink:.
+
+###Okay, here is what Antriksh did:
+
+First, here is how the parser script works for now:
+	python parser.py <filename>
+	
+What this script is doing is checking if in in common nouns a word is existing and replaces that word with the noun if there is one and if there is not, removes the word.
+
+Only checked for noun uptill now.
