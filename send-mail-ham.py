@@ -12,7 +12,8 @@ def send_message(recipient, subject, body):
 def main():
     exclude = raw_input('Enter directories to exclude, separated by a space: ')
     exclude = exclude.split(' ')
-    exclude.append('images')
+    defaultexclude = ['images','parser','results']
+    exclude.append(defaultexclude)
 
     print "Excluding directories " + str(exclude)
 

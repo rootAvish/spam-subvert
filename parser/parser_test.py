@@ -5,14 +5,6 @@ import sys
 
 script, filename = sys.argv
 
-
-def lemmalist(str):
-    syn_set = []
-    for synset in wn.synsets(str):
-        for item in synset.lemma_names:
-            syn_set.append(item)
-    return syn_set
-
 tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
 if open(filename) != -1:
     print "File opening works ..."
@@ -34,16 +26,12 @@ print words     #to print the tokens
 
 for a in words:
     print a
-
-lemmalist(data)
-
-syns = wn.synset(a)
-print "synset:", syns
+    syns = wn.synsets(a)
+    print "synset:", syns
 
 for s in syns:
     print 'Printing Lemmas :'
-    for l in s.lemmas:
-        print l.name
+    print s.lemmas
     print 'Printing definitions : '
     print s.definition
     print 'Printing examples : '
