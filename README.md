@@ -85,4 +85,4 @@ First, here is how the parser script works for now:
 	
 What this script is doing is checking if in in common nouns a word is existing and replaces that word with the noun if there is one and if there is not, removes the word.
 
-Only checked for noun uptill now.
+Only checked for noun for now. Actually checking for others is simple, I am just not getting a way to completely use the synsets in nltk.
