@@ -1,5 +1,6 @@
 from __future__ import division
 import nltk
+from nltk.tokenize import *
 from nltk.corpus import wordnet as wn
 import sys
 
@@ -18,7 +19,13 @@ else:
 	data = fp.read()
 	print data
 	#print '\n-----\n'.join(tokenizer.tokenize(data))
-	tokens = nltk.wordpunct_tokenize(data) 
+	tokens = word_tokenize(data)
+	print tokens
+	"""
+	fdist = nltk.FreqDist(tokens)
+	d = dict(fdist)
+	for i in d:
+		database.write(str(i)+'\t'+str(d[i])+'\n')"""
 	text = nltk.Text(tokens)
 	words = [w.lower() for w in text]
 	tags = nltk.pos_tag(words)
