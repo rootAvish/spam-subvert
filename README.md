@@ -95,4 +95,4 @@ A problem that I am still facing is that if I write the
 print (str(word)+'\t'+str(ham)+'\t'+str(spam)+'\t'+str(rating)+'\n')
 ```
 
-line into the file (obviously using database.write function). Correct it.
+line into the file (obviously using database.write function) it gets written in hex. Correct it.
