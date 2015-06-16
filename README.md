@@ -75,14 +75,24 @@ Then we can figure out a way to compare both results, like say draw a graph. I'l
 
 Please feel free to contact me for any further queries :wink:.
 
-###Okay, here is what Antriksh did:
+###Something new to jab your teeth into :
 
-First, here is how the parser script works for now:
-	
+I've reverse engineered and got the output rating :0/1
+
 ```bash
-	python parser.py <filename>
+	python get_ratings.py <file1> <file2>
 ```
-	
-What this script is doing is checking if in in common nouns a word is existing and replaces that word with the noun if there is one and if there is not, removes the word.
 
-Only checked for noun for now. Actually checking for others is simple, I am just not getting a way to completely use the synsets in nltk.
+To the database you put into mailserver, include only that folder (I used enron3) into with this script, reason for this being that you have used it as your test data and the output ratings were for this folder (enron3) only. Include that with the script as it asks you'll get an output of a number of words.
+
+file1 : the file containing your output of spam ratings (it was before.txt above).
+
+file2 : the file to store your output of spam ratings of each word.
+
+A problem that I am still facing is that if I write the 
+
+```bash
+print (str(word)+'\t'+str(ham)+'\t'+str(spam)+'\t'+str(rating)+'\n')
+```
+
+line into the file (obviously using database.write function). Correct it.
