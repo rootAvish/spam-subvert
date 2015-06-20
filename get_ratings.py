@@ -80,6 +80,7 @@ def main():
         rating = ((spam*num_ham) / ((ham*num_spam) + (spam*num_ham)))
 
         print (str(word)+'\t'+str(ham)+'\t'+str(spam)+'\t'+str(rating)+'\n')
+        database.write(str(word)+'\t'+str(ham)+'\t'+str(spam)+'\t'+str(rating)+'\n')
 
 if __name__ == '__main__':
     main()
